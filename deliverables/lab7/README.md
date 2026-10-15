@@ -2,6 +2,7 @@
 
 **Орындаған:** Табидулла Абылайхан. **Тобы:** АЖ45.
 
+- [Windows жүйесінде орындау және қорғау жөніндегі толық нұсқаулық (орысша)](INSTRUCTION_RU.md).
 - [Word есебі](Lab7_Tabidulla_Abylaikhan_AZh45.docx) — қазақша, 17 бет, 18 сурет.
 - [PDF есебі](Lab7_Tabidulla_Abylaikhan_AZh45.pdf).
 - [Толық ZIP архив](Lab7_AZh45_Patients_Complete.zip) — деректер, кодтар, журналдар, суреттер және есептер.
