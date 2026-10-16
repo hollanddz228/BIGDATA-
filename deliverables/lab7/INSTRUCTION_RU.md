@@ -90,7 +90,7 @@ docker pull cassandra:4.1.7
 Создать MongoDB:
 
 ```powershell
-docker run -d --name lab7-mongo -p 127.0.0.1:27017:27017 -v lab7-mongo-data:/data/db mongo:7.0.16 --bind_ip_all
+docker run -d --name lab7-mongo -p 127.0.0.1:27018:27017 -v lab7-mongo-data:/data/db mongo:7.0.16 --bind_ip_all
 ```
 
 Создать Cassandra:
@@ -390,7 +390,7 @@ Compass необязателен: mongosh уже соответствует тр
 
 1. Установи MongoDB Compass: https://www.mongodb.com/try/download/compass .
 2. Оставь Docker Desktop и контейнер `lab7-mongo` включёнными.
-3. Подключись по строке `mongodb://localhost:27017`.
+3. Подключись по строке `mongodb://127.0.0.1:27018`.
 4. Открой `hospital_lab7` → `patients` → **Documents**.
 5. Для поиска заполни Filter: `{"id":3}`.
 6. Для дополнительной задачи Filter: `{"age":{"$gt":40}}`, Sort: `{"age":-1,"id":1}`. Поле Sort находится в параметрах запроса; расположение зависит от версии Compass.
@@ -508,3 +508,5 @@ py -3.12 -X utf8 scripts/run_tasks.py
 Используй доступную установленную версию Python; вариант `-3.12` предполагает, что Python 3.12 установлен. Сценарии пересоздают учебные записи, выполняют все команды, сохраняют свежие журналы в results. Итоговое сообщение: `MONGOSH_AND_CQLSH_TASKS_COMPLETED`.
 
 Это альтернативный способ выполнить операции, а не обязательный дополнительный шаг после ручной работы. Он снова приводит обе базы к итоговым 767 записям. Отдельная проверка `verify_results.py` требует Python-драйверов из requirements; создание новых отчётных скриншотов и Word — дополнительных инструментов. Для ручного выполнения и защиты по разделам 1–12 они не нужны.
+
+В текущем Windows-варианте внешний порт MongoDB — **27018**, внутренний — 27017. Если используешь исходный `verify_results.py`, предварительно замени в его MongoDB URI `mongodb://127.0.0.1:27017/` на `mongodb://127.0.0.1:27018/`. Команды `docker exec ... mongosh` продолжают работать без изменения внутреннего порта.
