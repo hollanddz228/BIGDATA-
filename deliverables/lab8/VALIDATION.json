@@ -2,7 +2,9 @@
   "docx_archive_integrity": "passed",
   "pdf_pages": 11,
   "pdf_off_page_text_blocks": 0,
+  "pdf_empty_pages": [],
   "pdf_replacement_characters": 0,
+  "ui_language": "Russian labels, Kazakh explanations",
   "map_roundtrip_geometry": {
     "England": {
       "valid": true,
@@ -41,12 +43,13 @@
       ]
     }
   },
-  "mapping_rows": 13,
+  "mapping_rows": 12,
   "mapping_regions_unique": true,
-  "romford_reference_sum": 865,
-  "national_reference_leave_percentage": 51.89,
+  "input_archives_integrity": "passed",
+  "extracted_source_bytes_match_archives": true,
+  "sales_keys_and_joins": "passed",
+  "excel_csv_equivalence": "passed",
+  "independent_reference_computations": "passed; DATA_CHECKS.json",
   "power_bi_desktop_execution": "not run: Windows GUI application unavailable in Linux cloud",
-  "sales_archive_execution": "not run: source host inaccessible",
-  "electoral_commission_csv_execution": "not run: source host inaccessible",
-  "reference_values_origin": "Screenshots in user-provided assignment DOCX; national results stated for comparison, not recomputed from downloaded CSV."
+  "direct_electoral_commission_website_refresh": "not run: source host inaccessible; user-supplied exercise data used"
 }

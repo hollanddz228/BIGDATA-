@@ -1,0 +1,116 @@
+{
+  "validation_scope": "Source data and independent computations; Power BI Desktop and DAX were not executed.",
+  "sales_rows": {
+    "Purchase": 32471,
+    "Centre": 386,
+    "Town": 203,
+    "Region": 9
+  },
+  "sales_keys_unique_and_foreign_keys_matched": true,
+  "total_quantity": 74415,
+  "london_and_south_east_quantity": 28004,
+  "romford": {
+    "The Liberty Shopping Centre": 343,
+    "The Mall Romford": 119,
+    "The Brewery": 403
+  },
+  "romford_total": 865,
+  "voting_rows": 382,
+  "regions_rows": 12,
+  "excel_csv_equivalent": true,
+  "area_codes_unique": true,
+  "all_voting_regions_mapped": true,
+  "valid_votes_equal_leave_plus_remain_for_every_area": true,
+  "totals": {
+    "Leave": 17410742,
+    "Remain": 16141241,
+    "Valid_Votes": 33551983
+  },
+  "national_leave_share": 0.5189184198144116,
+  "top10": [
+    {
+      "Area": "Boston",
+      "PercentLeave": 0.755624259965794
+    },
+    {
+      "Area": "South Holland",
+      "PercentLeave": 0.7358627795623978
+    },
+    {
+      "Area": "Castle Point",
+      "PercentLeave": 0.726993924197126
+    },
+    {
+      "Area": "Thurrock",
+      "PercentLeave": 0.7228214625356625
+    },
+    {
+      "Area": "Great Yarmouth",
+      "PercentLeave": 0.7150494733482285
+    },
+    {
+      "Area": "Fenland",
+      "PercentLeave": 0.7139246760156577
+    },
+    {
+      "Area": "Mansfield",
+      "PercentLeave": 0.7086291353116569
+    },
+    {
+      "Area": "Bolsover",
+      "PercentLeave": 0.7083293624320975
+    },
+    {
+      "Area": "East Lindsey",
+      "PercentLeave": 0.7065320487220448
+    },
+    {
+      "Area": "North East Lincolnshire",
+      "PercentLeave": 0.6987035020637614
+    }
+  ],
+  "countries_gibraltar_separate": {
+    "England": {
+      "Leave": 15187583,
+      "Remain": 13247674,
+      "Valid_Votes": 28435257,
+      "areas": 326,
+      "LeaveShare": 0.5341109806041141
+    },
+    "Northern Ireland": {
+      "Leave": 349442,
+      "Remain": 440707,
+      "Valid_Votes": 790149,
+      "areas": 1,
+      "LeaveShare": 0.44224823419380394
+    },
+    "Scotland": {
+      "Leave": 1018322,
+      "Remain": 1661191,
+      "Valid_Votes": 2679513,
+      "areas": 32,
+      "LeaveShare": 0.3800399550216774
+    },
+    "Gibraltar": {
+      "Leave": 823,
+      "Remain": 19322,
+      "Valid_Votes": 20145,
+      "areas": 1,
+      "LeaveShare": 0.04085380987838173
+    },
+    "Wales": {
+      "Leave": 854572,
+      "Remain": 772347,
+      "Valid_Votes": 1626919,
+      "areas": 22,
+      "LeaveShare": 0.5252701578873933
+    }
+  },
+  "source_file_sha256": {
+    "part1/Construct a creature.xlsx": "95e06bf69f1e1fdcd1c31385d24c44aec99dc4ad658ff27dc02cc05427af190b",
+    "part2/Regions.csv": "286286470a8efa5235e38aba968de3a735afc810c38bb33118dd8f39be524009",
+    "part2/Regions.xlsx": "70b038943ac5ccd2af0ac679a83067c15f7b2455b6a08a430166803cbe2395f2",
+    "part2/Voting.csv": "8f161fbdf30419e0400fbc8cb09b84da15aee6c3645451ef24e51c2da701e786",
+    "part2/Voting.xlsx": "348b3bc4a0b80bc2999ed076c864d39369da73ebf345a353368aa9b8deffd95a"
+  }
+}

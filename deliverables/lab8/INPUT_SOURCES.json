@@ -1,0 +1,25 @@
+{
+  "source": "User-supplied exercise archives; extracted workbook/CSV bytes preserved unchanged.",
+  "archives": [
+    {
+      "filename": "qf-788.zip",
+      "sha256": "af4c416f0d2506069bf2b77c836c10b26567450e39687380d312894ec7c36a5a",
+      "exercise_source_url": "https://biconsult.ru/img/pbi/exercises/exercise-question-files/qf-788.zip",
+      "members": [
+        "Construct a creature.xlsx"
+      ]
+    },
+    {
+      "filename": "qf-774.zip",
+      "sha256": "9c7339d5a83b337c04fc48501c64e538b326ee8fff53b068823083d14f2374cc",
+      "exercise_source_url": "https://biconsult.ru/img/pbi/exercises/exercise-question-files/qf-774.zip",
+      "members": [
+        "Regions.csv",
+        "Regions.xlsx",
+        "Voting.csv",
+        "Voting.xlsx"
+      ]
+    }
+  ],
+  "note": "Voting is the exercise copy of Electoral Commission results. Direct website refresh not performed in cloud. Excel/CSV equivalence and data results are recorded in DATA_CHECKS.json."
+}

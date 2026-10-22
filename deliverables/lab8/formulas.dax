@@ -1,11 +1,12 @@
 // Әр формуланы Power BI ішіне БӨЛЕК енгізіңіз.
-// Кесте атаулары: Sales және Brexit. Өріс атауларын нұсқаулықпен сәйкестендіріңіз.
+// Кестелер: Purchase, Centre, Town, Region; екінші есепте Brexit және Regions.
+// Орысша интерфейс: Моделирование -> Создать столбец / Создать меру.
 
 // 1-бөлім: New column
-UK town = TRIM(Sales[Town]) & ", UK"
+UK town = TRIM(Town[TownName]) & ", UK"
 
 // 1-бөлім: New measure
-TotalQuantity = SUM(Sales[Quantity])
+TotalQuantity = SUM(Purchase[Quantity])
 
 // 2-бөлім: New column. Format = Percentage, 2 decimal places.
 PercentLeave = DIVIDE(Brexit[Leave], Brexit[Valid_Votes])
@@ -17,15 +18,20 @@ TotalValidVotes = SUM(Brexit[Valid_Votes])
 
 LeaveShare = DIVIDE([TotalLeave], [TotalValidVotes])
 
-// Қосымша аудандық карта: New column.
-// Regions[Region] -> Brexit[Region] белсенді 1:* байланысы қажет.
-// Gibraltar бөлек өңделеді; сәйкеспеген аймақтар BLANK болып қалады.
+// 2-бөлім: New column, Brexit кестесінде.
+// Regions[Region] -> Brexit[Region] белсенді 1:* байланысын алдымен жасаңыз.
+// Нақты деректе Gibraltar South West аймағына кіреді; карта үшін бөлек өңделеді.
+MapCountry =
+IF(
+    Brexit[Area_Code] = "GI",
+    "Gibraltar",
+    RELATED(Regions[Country])
+)
+
+// Қосымша аудандық карта: New column. Алдымен MapCountry жасаңыз.
 AreaCountry =
-VAR CountryName = RELATED(Regions[Country])
-RETURN
-    SWITCH(
-        TRUE(),
-        Brexit[Area] = "Gibraltar", "Gibraltar",
-        ISBLANK(CountryName), BLANK(),
-        Brexit[Area] & ", " & CountryName & ", United Kingdom"
-    )
+IF(
+    Brexit[Area_Code] = "GI",
+    "Gibraltar",
+    Brexit[Area] & ", " & Brexit[MapCountry] & ", United Kingdom"
+)
