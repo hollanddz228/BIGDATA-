@@ -1,0 +1,52 @@
+{
+  "docx_archive_integrity": "passed",
+  "pdf_pages": 11,
+  "pdf_off_page_text_blocks": 0,
+  "pdf_replacement_characters": 0,
+  "map_roundtrip_geometry": {
+    "England": {
+      "valid": true,
+      "bounds": [
+        -6.348948,
+        49.909613,
+        1.771169,
+        55.805487
+      ]
+    },
+    "Northern Ireland": {
+      "valid": true,
+      "bounds": [
+        -8.173837,
+        54.036363,
+        -5.430776,
+        55.311347
+      ]
+    },
+    "Scotland": {
+      "valid": true,
+      "bounds": [
+        -13.691314,
+        54.632961,
+        -0.754791,
+        60.847886
+      ]
+    },
+    "Wales": {
+      "valid": true,
+      "bounds": [
+        -5.310943,
+        51.384223,
+        -2.647043,
+        53.426703
+      ]
+    }
+  },
+  "mapping_rows": 13,
+  "mapping_regions_unique": true,
+  "romford_reference_sum": 865,
+  "national_reference_leave_percentage": 51.89,
+  "power_bi_desktop_execution": "not run: Windows GUI application unavailable in Linux cloud",
+  "sales_archive_execution": "not run: source host inaccessible",
+  "electoral_commission_csv_execution": "not run: source host inaccessible",
+  "reference_values_origin": "Screenshots in user-provided assignment DOCX; national results stated for comparison, not recomputed from downloaded CSV."
+}

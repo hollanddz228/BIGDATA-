@@ -1,0 +1,34 @@
+{
+  "description_kk": "Shape map үшін төрт елдің шекарасы. Аудандық 2016 шекаралары емес.",
+  "source": "Natural Earth, ne_10m_admin_1_states_provinces",
+  "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  "license": "Natural Earth public domain: https://www.naturalearthdata.com/about/terms-of-use/",
+  "retrieved_utc": "2026-10-22",
+  "processing": "Select adm0_a3=GBR, dissolve by geonunit, simplify 0.003 degrees preserving topology, export unquantized TopoJSON; six decimal coordinate precision.",
+  "uk_source_subset_sha256": "81b13d1af073850cf88184de5ab8bb90b9837c99d929420e4c3d69d85ecec2e9",
+  "output_sha256": "a1b6f58aef314b4db472c4761fb23bcf6ab4c2e6a02cb4a8fdbfad07d6ece5ae",
+  "map_key_property": "Country",
+  "checks": {
+    "England": {
+      "source_features": 152,
+      "valid": true,
+      "area_relative_change": 5.436507850802947e-05
+    },
+    "Northern Ireland": {
+      "source_features": 26,
+      "valid": true,
+      "area_relative_change": 5.381436116722182e-05
+    },
+    "Scotland": {
+      "source_features": 32,
+      "valid": true,
+      "area_relative_change": 0.0006062675301370794
+    },
+    "Wales": {
+      "source_features": 22,
+      "valid": true,
+      "area_relative_change": 7.849659853311528e-05
+    }
+  },
+  "power_bi_desktop_tested": false
+}

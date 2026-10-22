@@ -1,0 +1,31 @@
+// Әр формуланы Power BI ішіне БӨЛЕК енгізіңіз.
+// Кесте атаулары: Sales және Brexit. Өріс атауларын нұсқаулықпен сәйкестендіріңіз.
+
+// 1-бөлім: New column
+UK town = TRIM(Sales[Town]) & ", UK"
+
+// 1-бөлім: New measure
+TotalQuantity = SUM(Sales[Quantity])
+
+// 2-бөлім: New column. Format = Percentage, 2 decimal places.
+PercentLeave = DIVIDE(Brexit[Leave], Brexit[Valid_Votes])
+
+// 2-бөлім: үш бөлек New measure
+TotalLeave = SUM(Brexit[Leave])
+
+TotalValidVotes = SUM(Brexit[Valid_Votes])
+
+LeaveShare = DIVIDE([TotalLeave], [TotalValidVotes])
+
+// Қосымша аудандық карта: New column.
+// Regions[Region] -> Brexit[Region] белсенді 1:* байланысы қажет.
+// Gibraltar бөлек өңделеді; сәйкеспеген аймақтар BLANK болып қалады.
+AreaCountry =
+VAR CountryName = RELATED(Regions[Country])
+RETURN
+    SWITCH(
+        TRUE(),
+        Brexit[Area] = "Gibraltar", "Gibraltar",
+        ISBLANK(CountryName), BLANK(),
+        Brexit[Area] & ", " & CountryName & ", United Kingdom"
+    )
